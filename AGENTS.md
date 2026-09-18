@@ -23,4 +23,4 @@ Render runs this command to build your app before each deploy.
 $
 Publish Directory
 The relative path of the directory containing built assets to publish. Examples: ./, ./build, dist and frontend/build.
- с
+ 

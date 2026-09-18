@@ -1,0 +1,50 @@
+.hs-panel { display: grid; gap: 18px; padding-top: 8px; min-width: 0; }
+.hs-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.hs-header h2 { margin: 5px 0 0; font-size: 1.5rem; letter-spacing: -.03em; }
+.hs-kicker { color: #fb7185; text-transform: uppercase; letter-spacing: .12em; font-size: .7rem; font-weight: 700; }
+.hs-badge { padding: 7px 10px; color: #a5b4fc; border: 1px solid #a5b4fc35; border-radius: 8px; font-size: .75rem; white-space: nowrap; }
+.hs-panel .hs-note, .hs-panel .hs-source { color: #a4b0c3; font-size: .8rem; line-height: 1.6; }
+.hs-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); gap: 12px; align-items: end; padding: 18px; border: 1px solid #ffffff12; border-radius: 12px; background: #111b2a; }
+.hs-panel label { display: grid; gap: 7px; min-width: 0; }
+.hs-panel label > span { font-size: .73rem; font-weight: 600; color: #a4b0c3; }
+.hs-panel select, .hs-panel input { width: 100%; min-width: 0; padding: 11px 12px; color: #e7edf7; background: #0e1724; border: 1px solid #ffffff20; border-radius: 7px; font: inherit; font-size: .82rem; color-scheme: dark; }
+.hs-panel select:focus, .hs-panel input:focus { outline: 2px solid #60a5fa; outline-offset: 2px; }
+.hs-submit { padding: 12px 16px; background: #e04b55; border: 1px solid #f06770; border-radius: 7px; color: white; font: inherit; font-size: .85rem; font-weight: 700; cursor: pointer; }
+.hs-submit:disabled { cursor: wait; opacity: .65; }
+.hs-submit:hover:not(:disabled) { background: #ef5c65; }
+.hs-panel .hs-pending { border-left: 3px solid #eab863; padding: 11px 14px; background: #eab8630b; color: #e8c99a; font-size: .8rem; }
+.hs-panel .hs-error { padding: 14px; border: 1px solid #f8717135; border-radius: 8px; background: #f871710c; color: #fda4af; font-size: .85rem; }
+.hs-panel .hs-status, .hs-empty { padding: 28px 18px; text-align: center; color: #a4b0c3; font-size: .85rem; border: 1px dashed #ffffff1c; border-radius: 10px; }
+.hs-result { display: grid; gap: 16px; }
+.hs-applied { padding: 14px 16px; background: #172338; border-radius: 8px; }
+.hs-applied strong { color: #c9d7ec; font-size: .8rem; }
+.hs-panel .hs-applied p { margin-top: 4px; color: #a4b0c3; font-size: .77rem; line-height: 1.5; }
+.hs-summary { display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 12px; }
+.hs-summary > div { display: grid; gap: 8px; padding: 15px; border: 1px solid #ffffff14; border-radius: 9px; }
+.hs-summary span { font-size: .73rem; color: #94a3b8; }
+.hs-summary strong { font-size: 1.5rem; font-variant-numeric: tabular-nums; }
+.hs-summary .hs-dates strong { font-size: .84rem; line-height: 1.6; font-weight: 500; }
+.hs-table-controls { display: flex; gap: 14px; align-items: end; }
+.hs-table-controls label:first-child { flex: 1; }
+.hs-table-controls > span { padding-bottom: 12px; font-size: .78rem; color: #94a3b8; white-space: nowrap; }
+.hs-table-wrap { overflow-x: auto; border: 1px solid #ffffff14; border-radius: 10px; }
+.hs-table-wrap th, .hs-table-wrap td { padding: 11px 14px; }
+.hs-table-wrap th:not(:first-child), .hs-table-wrap td:not(:first-child) { text-align: right; font-variant-numeric: tabular-nums; }
+.hs-hero { display: inline-flex; align-items: center; gap: 10px; border: 0; background: none; color: #e7edf7; font: inherit; cursor: pointer; text-align: left; padding: 3px 0; }
+.hs-hero:hover:not(:disabled) { color: #93c5fd; }
+.hs-hero:disabled { cursor: default; }
+.hs-hero img { width: 28px; height: 28px; object-fit: contain; }
+.hs-positive { color: #6ee7b7; }
+.hs-source a, .hs-link { color: #93c5fd; }
+.hs-link { background: none; border: 0; padding: 0; font: inherit; text-decoration: underline; cursor: pointer; }
+.hs-panel button:focus-visible, .hs-panel a:focus-visible { outline: 2px solid #60a5fa; outline-offset: 3px; }
+@media (max-width: 650px) {
+  .hs-form { grid-template-columns: 1fr 1fr; padding: 12px; }
+  .hs-summary { grid-template-columns: 1fr 1fr; }
+  .hs-summary .hs-dates { grid-column: 1 / -1; }
+  .hs-table-controls { flex-wrap: wrap; }
+  .hs-table-controls > span { display: none; }
+  .hs-table-controls label { flex: 1; min-width: 125px; }
+  .hs-badge { display: none; }
+}
+@media (max-width: 390px) { .hs-form { grid-template-columns: 1fr; } }
